@@ -5,15 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps.css">
 </head>
 <body>
-    <button onclick="playRound(playerSelectionRock, computerSelection)">Rock</button>
+    <h1 class="header">Let's play Rock, Paper, Scissors. The First to Five Wins.</h1>
 
-    <button onclick="playRound(playerSelectionPaper, computerSelection)">Paper</button>
+    <h2 id="player-score"></h2>
+    <h2 id="computer-score"></h2>
+    <h2 id="player-wins"></h2>
+    <h2 id="computer-wins"></h2>
 
-    <button onclick="playRound(playerSelectionScissors, computerSelection)">Scissors</button>
 
-    <p id="result">The results should display here.</p>
+
+    <input type="text" placeholder='Type "rock", "paper", or "scissors"' id="player-input">
+    <button type="button" id="player-input" onclick="getInputVal();">Get Value</button>
+    
+
+    
+    <div class="rps-container">
+        <div class="rock-container">
+            <img src="images/rock.jpeg" alt="rock">
+            <button onclick="playRound(playerSelectionRock)">Rock</button>
+        </div>
+    
+        <div class="paper-container">
+            <img src="images/paper.jpeg" alt="paper">
+            <button onclick="playRound(playerSelectionPaper)">Paper</button>
+        </div>
+    
+        <div class="scissors-container">
+            <img src="images/scissors.jpeg" alt="scissors">
+            <button onclick="playRound(playerSelectionScissors)">Scissors</button>
+        </div>
+    </div>
+
+    <p id="result">Make your choice.</p>
     <script src="rps.js"></script>
 </body>
 </html>
